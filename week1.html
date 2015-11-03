@@ -29,6 +29,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+    $("#button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#day2").offset().top
+    }, 2000);
+});
+</script>
 
 </head>
 
@@ -75,8 +82,10 @@
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
         <div class="container">
-            <div class="row">
+      
+            <div class="row">  <div class="button">Day 2 </div>
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                 <div class="row">  
                     <div class="post-heading">
                         <h1>Man must explore, and this is exploration at its greatest</h1>
                         <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
@@ -91,7 +100,7 @@
     <article>
         <div class="container">
             <div class="row">
-                <div class="col1">
+                <div class="col1"><div class="button">Day 2 </div>
                 <h2 class="section-heading">Week 1 </h2>
                 <br><h3>Day 1 </h3>
                     <p>On the very  first day of pre fab training, our instructor Francisco Sanchez Arroyo gave us  an introduction about fablabs and the necessity of making things ourselves through his simple presentation. 
@@ -124,9 +133,6 @@ and we winded up for the day. </p>
 
                   
 
-                    <blockquote>The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
-
-               <pre><code class="language-css">p { color: red }</code></pre>
 
                     <h3>Day 2</h3>
 
@@ -139,15 +145,18 @@ and we winded up for the day. </p>
 
                   
 
-                    <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+                  
                 </div>
             </div>
+            <div class="day2">
             <div class="row">
                 <div class="col1">
                     
-Preparing Laptops and Lab Computers
+<h3>Preparing Laptops and Lab Computers</h3><br>
 
-To install latest Ubuntu Desktop LTS (currently 14.04).
+We had to start with preparing our Laptops and Computer for using fab modules and othe software required for fab academy. For that i need to install the latest LTS version of Ubuntu which is Ubuntu LTS 14.04.
+<br>
+To install latest Ubuntu Desktop LTS (currently 14.04).<br>
 
 Formatted one of my drives and prepared the drive.It was a 100 gb drive and deleted the partiotion. Started Installation using a bootable pendrive containing Ubuntu Desktop LTS (currently 14.04). Using the disk management tool created on 50Gb partition for root and 40 gb for home and allocated the remaining for Swap Area. <br>
 And it was completed successfully. Now my Lap is a multi booting lap with Windows 10 and Linux. I am a linux user from my school times. <br>Every time after the Linux installation what I do at first is customising the grub background. I hate the plain boot screen background. I don't know why. :).
@@ -166,7 +175,7 @@ That's it!. Next time when you boot your system you can see the image you select
 
 Next Franc showed how to install software using Ubuntu software center and how to install software using apt-get. I was familiar with those , so I started to install the required programs from the list which Franc shared.
 
-<h4>1.Adding “Terminal here” addon for Nautilus.</h4> <br>
+<h3>1.Adding “Terminal here” addon for Nautilus.</h3> <br>
 
 Code for that. <br>
 
@@ -180,7 +189,7 @@ After that when we restarted nautilus and right clicked we had that open in term
 
 
 
-<h4>2. Installing fab modules compiled version</h4> <br>
+<h3>2. Installing fab modules compiled version</h3> <br>
  To install Fab Modules Compiled version Franc shared this url http://kokompe.cba.mit.edu/ .
 Procedures are as follow.
 Download Fab Modules zip from the link. http://kokompe.cba.mit.edu/fab_src.zip
@@ -199,10 +208,10 @@ At this point, make install will copy all executables and scripts to /usr/local/
 After that you can run Fab Modules from terminal by typing fab.
 
 
-<h4>3. Installing Kokopelli retro.</h4> <br>
+<h3>3. Installing Kokopelli retro.</h3> <br>
 
-we have to install kokopelli retro  for editing Neil’s circuit boards. Kokopelli is one amazing software for creating circuit boards, 2d designs.
- How to install?
+we have to install kokopelli retro  for editing Neil’s circuit boards. Kokopelli is one amazing software for creating circuit boards, 2d designs.<br>
+ How to install?<br>
 
 Download zip from this link.
 Unzip the folder
@@ -219,7 +228,7 @@ then
 
 
 
-<h4>4. Installing Antimony</h4> <br>
+<h3>4. Installing Antimony</h3> <br>
  <p>Installing Antimony is lengthy process and it consumed some time for me. First we need to install all the dependencies.Here is the whole step i followed for installing Antimony in Ubuntu 14.04.
 
 Step 1. Install Qt : <br>Download Qt from here and right click on the downloaded file and set permision to run as executable file. Then double click on the file and continue the install.
@@ -270,21 +279,23 @@ Step 11. Open App
 
 Errors i got after installing Antimony.
  Whenever i try to add a 2d image after opening Antimony the app was crashing. It was since i missed step 3 in updating gcc.
+ <blockquote>If antimony crashes while trying add a component even after a successfull install. Update gcc from step 3.</blockquote>
 
-<h4>5. Installing Installing Inkscape.</h4> <br>
+
+<h3>5. Installing Installing Inkscape.</h3> <br>
 
 Inkscape can be directly installed from ubuntu software center
 
-<h4>6.Installing Openscad</h4> <br>
+<h3>6.Installing Openscad</h3> <br>
 Directly from Ubuntu Software center
 
-<h4>7.Installing Gimp</h4> <br>
+<h3>7.Installing Gimp</h3> <br>
 Directly from Ubuntu Software center
 
-<h4>8.Installing Cura</h4> <br>
+<h3>8.Installing Cura</h3> <br>
 Dowload the .deb file from Ulltimakers site and double click to install
 
-<h4>9.Installing Arduino IDE.</h4> <br>
+<h3>9.Installing Arduino IDE.</h3> <br>
 Franc told to direct download Arduino IDE instead of  installing from ubuntu software center.
 
 Download IDE from Arduino site and uzip the same. Open the unzipped directory and open it in terminal.
@@ -302,26 +313,28 @@ Scroll down and you can see Attiny . CLick on more info and click install. this 
 
 
 
-<h4>10.Installing Qcad.</h4> <br>
+<h3>10.Installing Qcad.</h3> <br>
+CAD is a free, open source 2D CAD system . Inorder to install this we need to download from their official Site.
 
-Download .run file from http://www.qcad.org/en/ and double click to install.
+Download .run file from <a href="http://www.qcad.org/en/">here</a> and double click to install.
 
-<h4>11.Installing Git</h4> <br>
+<h3>11.Installing Git</h3> <br>
 
 go to terminal. 
 
 $ apt-get install git
 
-<h4>12.Installing Eagle</h4> <br>
+<h3>12.Installing Eagle</h3> <br>
+EAGLE is one of many PCB CAD softwares out there. There is a free version available for Ubuntu which can be directly installed  from Ubuntu Software center.
+
+<h3>13.Installing Kicad</h3> <br>
+KiCad is an open source EDA software for Windows, OSX and Linux. Create PCB circuits for free with the most advanced features.It can be directly from Ubuntu Software center
+
+<h3>14.Installing Wine</h3> <br>
 Directly from Ubuntu Software center
 
-<h4>13.Installing Kicad</h4> <br>
-Directly from Ubuntu Software center
-
-<h4>14.Installing Wine</h4> <br>
-Directly from Ubuntu Software center
-
-<h4>15.Text editor </h4> <br>
+<h3>15.Text editor </h3> <br>
+I am used to Sublime text so i downloaded sublime.
  
 
 
@@ -330,8 +343,170 @@ Directly from Ubuntu Software center
 
                 </div>
             </div>
+            </div>
+
+
+
         </div>
     </article>
+
+   <div class="container">
+   	   <div class="row">
+   	   	
+
+<h2>Day 3 </h2>
+<h3>Creating accounts</h3>
+ <br>
+On Day 3 our first task was to create the following account and write down all the links. 
+These are  recommended for fab academy so that we can organize and store our data and files and synchronize everything. <br>
+<ul>
+<li>Fablabs.io Account</li>
+<li>git.fabcloud.io Account </li>
+<li>Google account</li>
+<li> Youtube and/or Vimeo account</li>
+<li>Dropbox account</li>
+<li> Sketchfab.com account</li> </ul>
+
+I skipped Google, Dropbox, Youtube account creation since I already have those.
+I started with git.fabclouds.io and signed up for an account. I refreshed my inbox thrice for the confirmation email.
+
+
+                    <blockquote>Always Check your Spam folder for Confirmation mail from git.fabclouds.io.</blockquote>
+
+Link to my Fab Cloud Account  http://git.fabcloud.io/u/abhilashst1
+Next I created Fablabs.io Account: Link https://www.fablabs.io/users/4693
+Sketchfab Account : https://sketchfab.com/abhilashst1 
+ <br>
+
+
+<h3>Creating Github Repositories</h3> <br>
+
+GIT is the most accomplished  distributed version control system. It helps us to manage our  own project locally using a version control tool or if we want  modify a code that is located in a remote central GIT repository. <br>
+
+<b>Installing and Configuring Git.</b> <br>
+
+  <pre><code class="language-css">$sudo apt-get install git </code></pre> <br>
+
+The next  step is to specify your username and email address to your GIT repository using “git config” as shown below.
+
+
+  <pre><code class="language-css">git config --global user.name "username"
+
+git config --global user.email email@email.com
+ </code></pre> <br>
+
+Verify the git configuration information as shown below. <br>
+
+
+  <pre><code class="language-css"> $ git config --list
+
+ </code></pre> <br>
+
+Create a repository in Github for  personal website
+
+Head over to GitHub and create a new repository named username.github.io, where username is your username (or organization name) on GitHub.
+If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right. <br>
+
+ Clone the created repo to our PC.
+
+ <pre><code class="language-css">$ git clone https://github.com/username/username.github.io
+
+ </code></pre> <br>
+
+Move to that folder and create index.html and some content. Now we need to push this.  <br>
+Add, commit, and push your changes: <br>
+ <pre><code class="language-css">
+$ git add --all
+#adding files
+$ git commit -m "Initial commit"
+#Adding Comments
+$ git push -u origin master
+# pushing
+ </code></pre> <br>
+
+<b>Creating SSH Keys.</b> <br>
+
+SSH keys are used to identify computers, it helps in pushing easy without  passwords.
+Before creating one we need to check for exixting ssh key.
+For that type the code below in terminal. <br>
+
+ <pre><code class="language-css">
+ls -al ~/.ssh
+# Lists the files in your .ssh directory, if they exist
+
+ </code></pre> <br>
+
+<b>Generate a new SSH key</b> <br>
+With Terminal still open, copy and paste the text below.Don't forget to change the email address to your login email id for github. <br>
+ <pre><code class="language-css">
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+ </code></pre> <br>
+
+Go with the default settings, skip paraphrase.I added a paraphrase which made my ssh configuring that not aading any advantage.So  i created new ssh key withoout paraphrase and then configured it to github. <br>
+Ensure ssh-agent is enabled:
+ <pre><code class="language-css">
+# start the ssh-agent in the background
+eval "$(ssh-agent -s)"
+# Agent pid 59566
+ </code></pre> <br>
+Add your SSH key to the ssh-agent:
+ <pre><code class="language-css">
+ssh-add ~/.ssh/id_rsa
+
+ </code></pre> <br>
+
+
+<b>Add your SSH key to your account</b> <br><br>
+Copy the SSH key to your clipboard. For that type the following code in terminal.This will install xclip first and then copies the key to clipboard. <br>
+<pre><code class="language-css">
+
+$ sudo apt-get install xclip
+# Downloads and installs xclip.
+
+xclip -sel clip < ~/.ssh/id_rsa.pub
+# For copying  the contents of the id_rsa.pub file to clipboard
+ </code></pre> <br>
+
+Now login to github account from browser, navigate to account settings by click on profile photo and clicking on Settings. <br>
+On the left  settings sidebar, click SSH keys. <br>
+Click Add SSH key. <br>
+Give name in the description field so that you can understand the device. <br>
+Paste key into the "Key" field. <br>
+Click Add key. <br>
+That's all folk Github is configured using ssh. Now we can push to your rep  very easily.
+
+
+
+
+<h3>Documenting Fab Academy and Pre Academy</h3>
+
+Next Franc talked about the importance of documentation. According to him it's all about documentation. HE told us to tell our story in documentation not a step by step tutorial.Familiarity with HTML will help us in documenting since we need to dump all our data into an HTML website. Then he shared some links to  <a href=”https://www.edx.org/course/html5-part-1-html5-coding-essentials-w3cx-html5-1x>”learn HTML </a>, and link to <a href=”http://startbootstrap.com/template-categories/all/ 
+”>download free bootstrap templates</a>. Also he shared the link to the grading criteria and final project requirements in Fab Academy.  <br><br>
+Link to Fab Academy 2015 Evaluation Checklist  <br><a href="https://docs.google.com/document/d/1v3GzwGlI4TFND0PUZPv_1FMEWwciLfFZj8WpypcbdFI/edit?usp=sharing">Click Here</a> <br>
+Fab Academy Final Project Requirements  <br><a href="https://docs.google.com/document/d/1Y7sYGcorkyrItmHEYzs4uvXvQC-HigonjJSwO8TYCg0/edit?usp=sharing"> CLick here</a>
+<h3>Photography. </h3> <br>
+
+
+Franc then told us about the importance of photography in Documentation Process. The size of the image should be in correct resolution that will not increase website loading time or reduce quality. I prefer to you 800 * 600 px images. I am familiar with photoshop so that i created a Action to resize all the images captured and screenshots to the required size. While taking images we should be careful to avoid blur.Franc told us about rule of thirds and how we should focus images and where to place images. Also we must be perfect in selecting the background for the images.We must not select very colorful  background, always do minimalist and give importance to what you people to notice at first. The lighting is another important thing to take of while doing photography for documentation. If we can create the scene it will be more nice and appealing for the viewers.
+<h3>Creating Mockups</h3> <br>
+ Mockups are very useful  for final project presentation or interface application since it can give an attractive appearance to our product. Franc shared this link where we can create Mockups . <br>
+
+<h3>Principles of good design</h3> <br>
+
+<ul>
+
+<li> Simplicity </li><li> Typography</li><li>  Color harmony</li>
+</ul>
+
+
+
+
+   	   </div>
+   </div>
+     <article>
+     	
+     </article>
 
     <hr>
 
