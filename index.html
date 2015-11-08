@@ -1,91 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-<head>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
-    <title>Fab Lab Kerala | Abhilash S T </title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/clean-blog.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-   
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Fab Lab Kerala</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="weekly.html">Weekly Documentation</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                    <img src="images/logo.png">
-                        <h1>Hi I'm Abhiash</h1>
-                        <hr class="small">
-                        <span class="subheading">Human spirit must prevail over technology!!</span>
-                    </div>
+        <!-- Add your site or application content here -->
+        <div id="wrapper">
+            <header id="topbar">
+                <div id="menus-wrapper" class="clearfix">
+                    <a id="logo" href="index.html"></a>
+                <nav id="menu">
+                        <ul class="clearfix">
+                            <li class="first_list"><a href="index.html" class="main_menu_first">Home</a></li>
+                            <li class="first_list"><a href="documentation.html" class="main_menu_first">Documentaton</a></li>
+                            <li class="first_list"><a href="gallery.html" class="main_menu_first">Design Files</a></li>
+                           
+                            
+                            <li class="first_list"><a href="contact.html" class="main_menu_first">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="toolbar">
+                        <form method="get" id="searchform" action="#">
+                            <a href="#" id="search-button"><i class="icon-search"></i></a>
+                            <fieldset>
+                                <input type="text" name="s" id="s">
+                            </fieldset>
+                        </form>
+                        <a href="#" id="like-button"><i class="icon-heart"></i></a>
+                        <a href="#" id="fullscreen-button"><i class="icon-fullscreen"></i></a>
+                    </nav>
                 </div>
-            </div>
-        </div>
-    </header>
+            </header>
+            <div id="main">
+                <div id="slicebox">
+                    <ul id="sb-slider" class="sb-slider">
+                        <li>
+                            <a href="http://www.flickr.com/photos/thomasclaveirole/8261304131/" target="_blank"><img src="images/slicebox/1.jpg" alt="image1"/></a>
+                            <div class="sb-description sb-description-light">
+                                <h3><span>Laser Cut Batman </span></h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="http://www.flickr.com/photos/thomasclaveirole/8262331072/" target="_blank"><img src="images/slicebox/2.jpg" alt="image2"/></a>
+                            <div class="sb-description sb-description-light">
+                                <h3><span>Viny Wedge </span></h3>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="http://www.flickr.com/photos/thomasclaveirole/8196073067/" target="_blank"><img src="images/slicebox/3.jpg" alt="image1"/></a>
+                            <div class="sb-description">
+                                <h3><span>Castle in Antimony</span></h3>
+                            </div>
+                        </li>
+                       
+                      
+                    </ul>
 
-    <!-- Main Content -->
-    <div class="container">
-       <div class="row">
-                <div class="col1">
-                <h2> About Me</h2>
+                    <div id="nav-arrows" class="nav-arrows">
+                        <a href="#"><i class="icon-chevron-left"></i></a>
+                        <a href="#"><i class="icon-chevron-right"></i></a>
+                    </div>
+
+                </div>
+
+                <div id="home" class="group">
+               
+                    <div id="timeline" class="col span_2_of_3">  
+
+                        <div class="timeline-item">
+                            <div class="timeline-author-date"><span>19/10/2015</span></div>
+                            <a href="week1.html" class="timeline-author-link">
+                                <img alt="avatar" src="images/avatars/avatar.png">
+                            </a>
+                            <a href="week1.html" class="timeline-item-link">
+                                <div class="timeline-item-content">
+                                    <div class="timeline-item-cover">
+                                        <img src="images/cover/paris.jpg" alt="paris">
+                                    </div>
+                                    <h2>Week 1</h2>
+                                    <p>On the very first day of pre fab training, our instructor Francisco Sanchez Arroyo gave us an introduction about fablabs and the necessity of making things ourselves through his simple presentation. In between he shared the google drive folder for all the participants which is to be used for storing and sharing files.</p>
+                                    <div class="timeline-item-meta"><span class="timeline-item-author">Abhilash  S T</span>, </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-author-date"><span>26/10/2015</span></div>
+                            <a href="week2.html" class="timeline-author-link">
+                                <img alt="avatar" src="images/avatars/avatar.png">
+                            </a>
+                            <a href="week2.html" class="timeline-item-link">
+                                <div class="timeline-item-content">
+                                    <div class="timeline-item-cover">
+                                        <img src="images/cover/paris.jpg" alt="paris">
+                                    </div>
+                                    <h2>Week 2</h2>
+                                    <p>Week 2 We started with the safety and security guidelines for using machines at Fab lab. Today we learned how to use Viny Cutter properly :). We started with..</p>
+                                    <div class="timeline-item-meta"><span class="timeline-item-author">Abhilash S T</span>, </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-author-date"><span>02/11/2015</span></div>
+                            <a href="week3.html" class="timeline-author-link">
+                                <img alt="avatar" src="images/avatars/avatar.png">
+                            </a>
+                            <a href="week3.html" class="timeline-item-link">
+                                <div class="timeline-item-content">
+                                    <div class="timeline-item-cover">
+                                        <img src="images/cover/paris.jpg" alt="paris">
+                                    </div>
+                                    <h2>Week 3</h2>
+                                    <p>Week 3 is dedicated for Electronics and programming, also we need to create our catch up plans and be back on track by Friday.This week we learned electronics production, creating pcb using kokopelli and also programming of these boards....</p>
+                                    <div class="timeline-item-meta"><span class="timeline-item-author">Abhilash S T</span>, </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-author-date"><span>09/11/2015</span></div>
+                            <a href="week4.html" class="timeline-author-link">
+                                <img alt="avatar" src="images/avatars/avatar.png">
+                            </a>
+                            <a href="week4.html" class="timeline-item-link">
+                                <div class="timeline-item-content">
+                                    <div class="timeline-item-cover">
+                                        <img src="images/cover/paris.jpg" alt="paris">
+                                    </div>
+                                    <h2>Week 4</h2>
+                                    <p>Week 5. Our instructor Fransisco went to Kochi and this week Luciano will be taking classes for us. This week we plannned and  designed group project with help of Luciano integrating all skills learnedmin last 3 weeks...</p>
+                                    <div class="timeline-item-meta"><span class="timeline-item-author">Abhilash S T</span>, </div>
+                                </div>
+                            </a>
+                        </div>
+                       
+                    </div>
+                    <div id="sidebar" class="col span_1_of_3">
+                        <div class="widget widget_search">
+                            <h3 class="widget-title">About Me</h3>
+                            
                     <p>What makes my clock tick? <br>
                     <br>
 
@@ -95,78 +172,158 @@ I come from a rural background where, in my childhood, we didn’t have much acc
 </p>
 
                     <p>Technology is the game-changer in the era that we live right now. People have become more and more dependent on technology and I’ve taken it upon myself to make sure that people are given access to technology that will change their lives for the better. I’m passionate about exploring technology and innovations.</p>
+                        </div>
+                        <div class="widget widget-popular">
+                            <h3 class="widget-title">Design Files</h3>
+                            <div class="fancy-carousel">
+                                <ul class="widget-carousel">
+                                    <li>
+                                        <div class="overlay-thumb">
+                                            <img width="200" height="140" src="images/related/amigo.jpg" alt="amigo">
+                                            <a class="fancy-overlay" href="#">
+                                                <h5 class="overlay-title">Amigo Wallpaper by Artcore</h5>
+                                                <div class="overlay-icon">
+                                                    <i class="icon-share-alt"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="overlay-thumb">
+                                            <img width="200" height="140" src="images/related/cowboy.jpg" alt="cowboy">
+                                            <a class="fancy-overlay" href="#">
+                                                <h5 class="overlay-title">Cowboy Wallpaper by Artcore</h5>
+                                                <div class="overlay-icon">
+                                                    <i class="icon-share-alt"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="overlay-thumb">
+                                            <img width="200" height="140" src="images/related/fish.jpg" alt="fish">
+                                            <a class="fancy-overlay" href="#">
+                                                <h5 class="overlay-title">Fish Wallpaper by Artcore</h5>
+                                                <div class="overlay-icon">
+                                                    <i class="icon-share-alt"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="overlay-thumb">
+                                            <img width="200" height="140" src="images/related/goodmorning.jpg" alt="goodmorning">
+                                            <a class="fancy-overlay" href="#">
+                                                <h5 class="overlay-title">Good Morning Wallpaper by Artcore</h5>
+                                                <div class="overlay-icon">
+                                                    <i class="icon-share-alt"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="overlay-thumb">
+                                            <img width="200" height="140" src="images/related/ilovelife.jpg" alt="ilovelife">
+                                            <a class="fancy-overlay" href="#">
+                                                <h5 class="overlay-title">I Love Life Wallpaper by Artcore</h5>
+                                                <div class="overlay-icon">
+                                                    <i class="icon-share-alt"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="overlay-thumb">
+                                            <img width="200" height="140" src="images/related/monster.jpg" alt="monster">
+                                            <a class="fancy-overlay" href="#">
+                                                <h5 class="overlay-title">Monster Wallpaper by Artcore</h5>
+                                                <div class="overlay-icon">
+                                                    <i class="icon-share-alt"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="overlay-thumb">
+                                            <img width="200" height="140" src="images/related/onlymonsters.jpg" alt="onlymonsters">
+                                            <a class="fancy-overlay" href="#">
+                                                <h5 class="overlay-title">Only Monsters Eat Meats Wallpaper by Artcore</h5>
+                                                <div class="overlay-icon">
+                                                    <i class="icon-share-alt"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="overlay-thumb">
+                                            <img width="200" height="140" src="images/related/pirate.jpg" alt="pirate">
+                                            <a class="fancy-overlay" href="#">
+                                                <h5 class="overlay-title">Pirate Wallpaper by Artcore</h5>
+                                                <div class="overlay-icon">
+                                                    <i class="icon-share-alt"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="overlay-thumb">
+                                            <img width="200" height="140" src="images/related/rocknroll.jpg" alt="rocknroll">
+                                            <a class="fancy-overlay" href="#">
+                                                <h5 class="overlay-title">Rock'n Roll Wallpaper by Artcore</h5>
+                                                <div class="overlay-icon">
+                                                    <i class="icon-share-alt"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="popular-nav">
+                                    <span class="prev-popular"><i class="icon-chevron-left"></i></span>
+                                    <span class="next-popular"><i class="icon-chevron-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="widget widget-social">
+                            <h3 class="widget-title">Contact Details</h3>
+                            <ul class="social-buttons-list clearfix">
+                               
+                                <li><a class="social-button" href="facebook.com/abhilash.st"><img src="img/social/Facebook.png"></a></li>
+                               
+                                <li><a class="social-button" href="https://github.com/abhilashst"><img src="img/social/GitHub.png"></a></li>
+                               
+                                <li><a class="social-button" href="https://in.linkedin.com/in/abhilashst"><img src="img/social/LinkedIn.png"></a></li>
+                                
+                                
+                               
+                           
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-                  
-                </div>
-                <div class="row">
-                	 <h2 style="text-align:center;">  Pre fab Documentation</h2><br>
-                	  <ul class="nav navbar-nav navbar-left">
-                    <li style="margin-left: 115px;">
-                       <h3> <a href="week1.html">Week 1</a> </h3>
-                    </li>
-                    <li style="margin-left: 115px;">
-                        <h3><a href="week2.html">Week 2</a></h3>
-                    </li>
-                    <li style="margin-left: 115px;" >
-                       <h3> <a href="week3.html">Week 3</a></h3>
-                    </li >
-                    <li style="margin-left: 115px;">
-                        <h3><a href="week4.html">Week 4</a></h3>
-                    </li>
-                </ul>
-                	
-                </div>
+               
             </div>
-    </div>
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+            <footer id="footer" class="clearfix">
+                <div class="group">
+                   
+                   
+                    <div class="col span_1_of_3">
+                        <h2>Abhilash S T</h2>
+                        <p>Keral Startup Mission</br>
+                        G3 Thejaswini<br>
+                        Technopark, Thiruvananthapuram</p>
+                    </div>
                 </div>
-            </div>
+            </footer>
         </div>
-    </footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.js"></script>
-
-</body>
-
+        
+    </body>
 </html>

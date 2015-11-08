@@ -1,182 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-<head>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link href="css/prism.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="css/prism.css" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+         <script src="js/prism.js"></script>
 
-    <title>Clean Blog - Sample Post</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/clean-blog.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.js"></script>
-    <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="weekly.html">Weekly Documentation</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                        <h1>Man must explore, and this is exploration at its greatest</h1>
-                        <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
-                        <span class="meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</span>
+        <!-- Add your site or application content here -->
+        <div id="wrapper">
+          
+            <header id="topbar">
+                <div id="menus-wrapper" class="clearfix">
+                    <a id="logo" href="index.html"></a>
+                <nav id="menu">
+                        <ul class="clearfix">
+                            <li class="first_list"><a href="index.html" class="main_menu_first">Home</a></li>
+                            <li class="first_list"><a href="documentation.html" class="main_menu_first">Documentaton</a></li>
+                            <li class="first_list"><a href="gallery.html" class="main_menu_first">Design Files</a></li>
+                           
+                            
+                            <li class="first_list"><a href="contact.html" class="main_menu_first">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="toolbar">
+                        <form method="get" id="searchform" action="#">
+                            <a href="#" id="search-button"><i class="icon-search"></i></a>
+                            <fieldset>
+                                <input type="text" name="s" id="s">
+                            </fieldset>
+                        </form>
+                        <a href="#" id="like-button"><i class="icon-heart"></i></a>
+                        <a href="#" id="fullscreen-button"><i class="icon-fullscreen"></i></a>
+                    </nav>
+                </div>
+            </header>
+            <div id="main">
+                <div id="cover">
+                    <figure>
+                        <img src="images/cover/paris.jpg" alt="paris">
+                    </figure>
+                    <div id="overlay">
+                        <div id="overlay-wrapper">
+                          
+                            <h2><span id="subtitle">'Laugh in the face of danger'. Oops. Wrong One. 'Do it yourself'. Yes, that's it.
+</span></h2>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
+                <div id="content" class="group">
+                    <div id="main-content" class="col span_3_of_4">
+                      
+                <h2 class="section-heading">Week 2 </h2>
+                <br><h3>Day 1 </h3>
+                    <p>Week 2 
 
-    <!-- Post Content -->
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col1">
-                    <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
 
-                    <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+<h4>Vinyl cutter</h4>
+<p>
 
-                    <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
 
-                    <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+We started with Vinyl cutter on day 1 of week2. The first thing was setting up our laptops for printing with Roland Vinyl Cutter.For that we need to add Vinyl Cutter in the printer section.<br>
+Inorder do that go to localhost:631/ from our browser where we can access CUPS (Common Unix Printing System) is a modular printing system for Unix-like computer operating system) .- > Go to Administration Section -> Add Printer(Ensure  that printer is connected) -> Select Roland GX24 -> Give Name as vinyl (!important) ->  Select Make “Raw” and Model “Raw Queue” -> set default options. And now i have added Roland GX 24  in my printers list.
+<br><br>
 
-                    <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+We have to be careful while loading the vinyl. It must cover the sensor then only the material will be detected. We should align the material according to the lines in the vinyl cutter. We can either use a roll or piece. After placing it in proper alignment we need to lock the material using the lever on the back side. After that we  can  turn on the Printer. Then it will ask for selecting the material type. We loaded a piece of vinyl sheet so we selected the piece from the list in printer. When we do this the printer automatically scans for the length and width of the piece of vinyl we loaded. Now we moved printhead and selected the place to start printing. In Order to set this as origin we need to press and hold the set or , but we failed to remove theigin button for a few seconds. Now we tried to make a test cut with pen force set to +2 which is the optimum setting for this printer. In test cut the printer cuts a circle with a square inside. If we can easily remove the circle without peeling square the machine is printing we. But we faced problem here</p>.
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#999; vertical-align: middle;margin-left: 100px;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
+.tg .tg-yw4l{vertical-align:middle;}
+</style></style>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l">Problem</th>
+    <th class="tg-yw4l">Solution</th>
+    <th class="tg-yw4l">Result</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l" rowspan="6">Test Cut - Couldnt remove Circle without peeling Square</td>
+    <td class="tg-yw4l">Adjust Penforce</td>
+    <td class="tg-yw4l">Not Solved</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Adjust blade Length</td>
+    <td class="tg-yw4l">Not Solved</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Cleaning the blade</td>
+    <td class="tg-yw4l">Not Solved</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Cleaning the blade</td>
+    <td class="tg-yw4l">Not Solved</td>
+  </tr>
+<tr>
+    <td class="tg-yw4l">Replacing the white teflon</td>
+    <td class="tg-yw4l"> Not Solved</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Replacing  the blade</td>
+    <td class="tg-yw4l"> Solved</td>
+  </tr>
 
-                    <h2 class="section-heading">The Final Frontier</h2>
 
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+</table>
 
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+<br><br>
+</p>
+After carefully looking through digital microscope we noticed that the bit is broken a little bit at the tip. So we replaced the blade and again tried test cut  this time we were able to remove the circle easily without removing the square. After this we all selected a design from net which is black and white and printed the same using the Vinyl Cutter.
+I printed the design below. After printing we need to peel off the unwanted vinyl . Since my design was a  little bit complicated it consumed some time to peel.<br>
 
-                    <blockquote>The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
 
-                    <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+My design after peeling unwanted Vinyl.<br>
 
-                    <h2 class="section-heading">Reaching for the Stars</h2>
 
-                    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+I applied this to my laptop. For that first we need to transfer this to another plain sticker and while we applying we need to start from the center. and slowly apply to sideways with some force.</p>
 
-                    <a href="#">
-                        <img class="img-responsive" src="img/post-sample-image.jpg" alt="">
-                    </a>
-                    <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
 
-                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-
-                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-
-                    <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+                    </div>
+                    
                 </div>
-            </div>
-        </div>
-    </article>
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+                <div id="author-and-share" class="group">
+                   
+                    <div id="author" class="col span_3_of_4">
+                       
+                        
+                            <p>"There is no end to education. It is not that you read a book, pass an examination, and finish with education. The whole of life, from the moment you are born to the moment you die, is a process of learning."</p>
+                        </div>
+                    </div>
                 </div>
+              
+             
             </div>
+            <footer id="footer" class="clearfix">
+                <div class="group">
+                   
+                   
+                    <div class="col span_1_of_3">
+                        <h2>Abhilash S T</h2>
+                        <p>Keral Startup Mission</br>
+                        G3 Thejaswini<br>
+                        Technopark, Thiruvananthapuram</p>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.js"></script>
-
-</body>
-
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+     <script src="js/prism.js"></script>
+        
+    </body>
 </html>
