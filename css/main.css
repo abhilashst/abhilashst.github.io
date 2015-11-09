@@ -299,8 +299,8 @@ input, textarea, input[type="text"], input[type="url"], input[type="email"], inp
 #topbar{
     padding: 15px 30px;
     position: relative;
-    background: #fafafa;
-    border-bottom: 1px solid #eaeaea;
+    background: white;
+    border-bottom: 2px solid #eaeaea;
     display:block;
     width: 100%;
     z-index: 1002;
@@ -367,10 +367,10 @@ input, textarea, input[type="text"], input[type="url"], input[type="email"], inp
 
 #logo{
     display: block;
-    width: 80px;
-    height: 22px;
+     width: 303px;
+    height: 44px;
     float: left;
-    background: transparent url(../img/logo.png) no-repeat center center;
+    background: transparent url(../img/logo.jpg) no-repeat center center;
 }
 
 /* 
@@ -380,9 +380,9 @@ input, textarea, input[type="text"], input[type="url"], input[type="email"], inp
     position: relative;
     display: block;
     padding: 0;
-    margin-left: 20px;
+    margin-right: 50px;
     padding-right: 55px;
-    float: left;
+    float: right;
 }
 
 #menu > ul{
@@ -838,17 +838,7 @@ ul#portfolio-items{
 }
 
 #overlay{
-    bottom: 0;
-    top: 0;
-    left: 30px;
-    position: absolute;
-    color: white;
-    background: url(../img/bg-overlay.png) repeat left top;
-    right: 30px;
-    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
-    -moz-box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
-    -o-box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
-    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
+ 
 }
 
 #overlay-wrapper{
