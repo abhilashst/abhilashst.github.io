@@ -145,6 +145,11 @@ textarea {
     margin-bottom: 0;
 }
 
+.newtest{
+
+    margin-left: 266px;
+}
+
 /* ==========================================================================
    ReadIt main css file
    ========================================================================== */
@@ -164,7 +169,7 @@ body {
 
 a{
     text-decoration: none;
-    color: #222;
+    color: #EC3333;
     transition: color .3s;
     -moz-transition: color .3s; /* Firefox 4 */
     -webkit-transition: color .3s; /* Safari and Chrome */
