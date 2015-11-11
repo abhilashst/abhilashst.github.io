@@ -255,7 +255,7 @@ $(function(){
 	Slicebox configuration
 
 -----------------------------------------------------------------------------------*/
-	var $navArrows = $( '#nav-arrows' ).hide(),
+	var $navArrows = $( '#naav-arrows' ).hide(),
 		commonSpeed = 600,
 		$descriptions = $('.sb-description'),
 		slicebox = $( '#sb-slider' ).slicebox( {
