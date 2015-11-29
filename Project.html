@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Week 4, Documentation - Pre Fab Kerala</title>
+        <title>Parking Assist using Ping Sensor- Documentation - Pre Fab Kerala</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -64,7 +64,7 @@
             <div id="main">
                 <div id="cover">
                     <figure>
-                        <img src="images/cover/week4.jpg"  width="800px" height="280px" alt="paris">
+                        <img src="images/cover/project.jpg"  width="800px" height="280px" alt="paris">
                     </figure>
                     <div id="overlay">
                         <div id="overlay-wrapper">
@@ -77,11 +77,8 @@
                 <div id="content" class="group">
                     <div id="main-content" class="col span_3_of_4">
                       
-                <h2 class="section-heading">Week 4</h2>
-                <br><h3>Day 1 </h3>
-                    <p>
-
-                    Our instructor Fransisco went to Kochi and Luciano will be taking classes for us this week . This week we will be  planning designing our final project along with our other catch up plans. Luciano gave us a brief about the final project like what it should be, how to design and other related stuff. We have to design a product which we can fabricate inside fablab and should be simple so that we can finish this product in the available time frame. After that Luciano listed out the requirements inside Fab lab and what we are lacking in our lab. We can take any of these issues to do our final project. Luciano asked us to finalize our project idea and present it before everyone by afternoon.I was in great confusion about my project idea. After thinking lot i decided to  make a Low Cost Parking Assit using Attiny 44 and a Ultrasonic Sensor.
+                <h2 class="section-heading">Parking Assit using Ping Sensor</h2>
+               
             <br><br>
             <b>Design Brief</b><br><br>
 
@@ -112,42 +109,135 @@ Fabrication Process : PCB Design -> Milling PCB -> Soldering -> Programming -> B
  The average Cost of production will be less than Rs. 500 including price for the sensor.
 <br><br>
 
-After finalizing the design idea and writing project brief Luciano gave us a quick demo of soldering a Fabduino IC. We used to solder pin by pin of IC's which consume more time and makes the soldering process too complex. Luciano taught us to solder using the "gloop and subtract" technique. In this firs wwe fix one leg of the IC and make its orientation correct then we pour solder over all legs so that there will be too much solder in all of the legs of the IC. Now we will use Quickbraid to remove the excess solder. Thus our IC is perfectly soldered to the board.<br>
-
-  <br><h3>Day 2 & Day 3</h3>
- I missed two importants days in Pre fab since i burned my fingers during Diwali. Luciano taught how to use Shopbot (I was waiting for this actually ) and Designing using Rhino these days. 
-
-  </p>
-   <br><h3>Day 4</h3>
-   Today I was focussing on designing my project till after noon and in the after we did moulding. I planned to use fabduino for my project so i started with customising the fabduino for my project. I need three  Output pins and two pins for driving the Ping Sensor as per the current plan. It was really hectic for me to do these manual routing using eagle. I added two sockets for soldering sensor input and for taking led output . Also I placed an On board RGB LED. Tommorow I have to mill this PCB.
-
 <br><br>
 
-<img src="images/final-pcb.png" width="" height="">
+<b>PCB Fabrication</b>  
+ <br><br>
 
-<p style=" text-align:center;  "> Modified Fabduino</p><br>
+Since modifying Fabduino and doing project with that was failed and the availble time limit wa limited i decided to change my plan. I selected the Hello World FTDI board for my project beta testing. Using this board i can create the beta version of project with help of the Ping sensor and Fab ISP.I had my working Hello world board with me. I decide to give a try using that. <br>
+My first requiremnt was to arrange connector that can connect my sensor to FTDI Header of the board . Now the limitation is that i need to power the board using ISP. I ignored this since if i can successfully read measurement and test my beta using this board later i can design a new board with external power supply. i created a 4 pin connector using the connectors available in the inventory.
 
-.<br>
-By after noon we moved to moulding. We already had our wax cut designs. Before starting the moulding Luciano gave us brief idea about the avialable kind of material in our inventory. We have Liquid Rubber, Liquid Plastic, Heat resistant Mould, Color dye available in our inventory. These have an average shelf life of 6 months only and since our place is toomuch humid it may be even more less.
+
 <br><br>
+<img src="images/cable.jpg" width="840px" height="422px">
 
-<img src="images/mould-desk.jpg" width="840px" height="">
+<p style=" text-align:center;  ">Connector</p><br>
 
-<p style=" text-align:center;  "> Desk prepared for Moulding</p><br>
+Now connect the cable to the sensor and the board in correct orientation.
 
-.<br>
-  Today we used OOMOO 25 for for moulding. There are two different solution in one pack. We need to mix these at specific ratio first before pourig it to the design. These are highly toxic and allergic , so we must use gloves while handling them. Once we mix the both we need to stirr it well till there is uniform color. Once mixed this we have 15 minutess to pour this onto pur wax mould before it starts setting. We poured it to all the available wax mould and allowed it for setting.Thats all for the day. <br>
 <br><br>
+<img src="images/connections.jpg" width="840px" height="422px">
 
-<img src="images/moulding.jpg" width="840px" height="">
+<p style=" text-align:center;  ">Connections</p><br>
 
-<p style=" text-align:center;  "> Pouring OOMOO 25 to my Wax Mould</p><br>
+I have a LED available on my board which am going to use as my indicator for distance. My plan is to make high delayed blink when the distance is higher than 10 inches and make sma delayed blinks when distance is less than 10 inches. For using this Ping sensor HC SR04 i need the library newping sensor which can be downloaded form  <a href="http://playground.arduino.cc/Code/NewPing"> here</a> . We need to import this library first before coding. For that quit arduino if open and paste the unzipped downloaded folder to the library folder inside arduino folder.<br><br>
+<pre><code class="language-css">
 
-.<br>
-<br><h3>Day 5</h3>
+/*
+Parking Assist 
 
-The day completely dedicated for project work. Yesterday i have completed my PCB designing and today I tried milling the board. But its was a failure. The board i got milled was completely a mess . The traces were too thin and it was very hard to find the IC pads.So it clearly showed that my PCB Design was faulty. So i started designing again. I spend the whole day in re routing and giving higher thickness for the traces. Manual routing was a bit diffiucult for me but Luciano gave a small brief of manual routing. 
+Abhilash S T
+27/11/2015
 
+ */
+
+#include <NewPing.h>            //include the NewPing library
+
+//I/O pins
+int rLED = 8; // Setting pin 8 as output pin
+int echo = 1; // Setting pin 1 as echo input from HC SR04
+int trigger = 0; // Setting pin 0 as trigger pin.
+
+
+
+//values to keep track of
+int distance = 0;
+
+
+NewPing sonar(0, 1, 500);       //constructor for NewPing sonar(triggerPin, echoPin, max_CM)
+
+void setup()
+{
+pinMode(rLED, OUTPUT);
+
+
+}
+void loop()
+{
+  distance = sonar.ping_in();                  //detect distance in inches
+  if(distance == 0) 
+ 
+{
+   digitalWrite(rLED, HIGH);  
+     delay(1000); 
+      digitalWrite(rLED, LOW); 
+
+  
+}
+else{
+  
+  }
+
+
+  // if distance is greater than 10 inches led will glow for 1 second and will be off for 5 Second
+
+
+if (distance >= 10 ) {
+ 
+
+  digitalWrite(rLED, HIGH);  
+  delay(1000);
+   digitalWrite(rLED, LOW); 
+     delay(5000);
+  digitalWrite(rLED, HIGH);  
+  }
+
+ else{
+  
+  }
+
+  //if distance is less than 10 inches LED with Blink with a deay of 150ms
+ 
+  if (distance <= 10 ) {
+ 
+
+  digitalWrite(rLED, HIGH);  
+  delay(150);
+   digitalWrite(rLED, LOW); 
+     delay(150);
+  digitalWrite(rLED, HIGH);  
+  }
+
+ else{
+  
+  }                                                   
+}                 //end of loop
+
+</code></pre>
+
+<br><br>
+<img src="images/project-beta.jpg" width="840px" height="422px">
+
+<p style=" text-align:center;  ">Project Setup</p><br>
+Now we need to burn this program into our board using Arduino IDE. Thank god there was no compiling  errors in the  program. Uploaded the code sucessfully and no i can see the LED blinking slowly. Now i arranged the component as shown below and tested using a paper as obstacle. When brought close say 10 inches from sensor the led was blinking very fast. So now i have my beta project running sucessfully.In the below video i have reduced the distance to 5 inches for convenience in taking video.
+
+
+<br>
+<video width="640" align="center" height="480" poster="files/1.jpg" audio="muted"  controls="controls" loop="loop" preload="preload">
+
+<source src="files/project.webm" type="video/webm">
+
+Your Browser does not support the new HTML5 Video-Tag
+</video>
+	<br>
+<p style=" text-align:center;  ">Parking Assist Beta Version.</p><br>
+ <b> Limitations of the beta Version </b><br><br>
+ <ol>
+ <li>Requires Fab ISP or 5v supply and  need to use ISP header for powering the circuit.</li>
+  <li>There only one LED available for indication purpose (Initially I planned for a RGB LED)</li> 
+  <li>There is no casing designed for the project</li>
+  </ol>
+   <b>Modified Hello world Circuit for my project </b><br><br>
                     </div>
                      <div id="side-content" class="col span_1_of_4">
                             <div class="row">

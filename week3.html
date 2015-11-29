@@ -46,7 +46,7 @@
                             <li class="first_list"><a href="gallery.html" class="main_menu_first">Design Files</a></li>
                            
                             
-                            <li class="first_list"><a href="contact.html" class="main_menu_first">Contact</a></li>
+                            <li class="first_list"><a href="Project.html" class="main_menu_first">Project</a></li>
                         </ul>
                     </nav>
                     <nav id="toolbar">
@@ -64,7 +64,7 @@
             <div id="main">
                 <div id="cover">
                     <figure>
-                        <img src="images/cover/week2.jpg"  width="800px" height="280px" alt="paris">
+                        <img src="images/cover/week3.jpg"  width="800px" height="280px" alt="paris">
                     </figure>
                     <div id="overlay">
                         <div id="overlay-wrapper">
@@ -258,28 +258,35 @@ Inorder to program this we need our FAB ISP, a mini USB Cable , FTDI header cabl
 
 Now we were about to load blink program to the board, but i selected the fade program from the examples.Its pretty easy to burn program to the board, all we have to do is set the led pin as pin 8 (that is where we have connected LED in the board) and compile the program and just click upload.
 <pre><code class="language-css">
-int ledPin = 8;    // LED connected to digital pin 9
+/*
+ Fade
 
+ */
+
+int led = 8;           // the pin that the LED is attached to
+int brightness = 0;    // how bright the LED is
+int fadeAmount = 5;    // how many points to fade the LED by
+
+// the setup routine runs once when you press reset:
 void setup() {
-  // nothing happens in setup
+  // declare pin 8 to be an output:
+  pinMode(led, OUTPUT);
 }
 
+// the loop routine runs over and over again forever:
 void loop() {
-  // fade in from min to max in increments of 5 points:
-  for (int fadeValue = 0 ; fadeValue <= 255; fadeValue += 5) {
-    // sets the value (range from 0 to 255):
-    analogWrite(ledPin, fadeValue);
-    // wait for 30 milliseconds to see the dimming effect
-    delay(30);
-  }
+  // set the brightness of pin 8:
+  analogWrite(led, brightness);
 
-  // fade out from max to min in increments of 5 points:
-  for (int fadeValue = 255 ; fadeValue >= 0; fadeValue -= 5) {
-    // sets the value (range from 0 to 255):
-    analogWrite(ledPin, fadeValue);
-    // wait for 30 milliseconds to see the dimming effect
-    delay(30);
+  // change the brightness for next time through the loop:
+  brightness = brightness + fadeAmount;
+
+  // reverse the direction of the fading at the ends of the fade:
+  if (brightness == 0 || brightness == 255) {
+    fadeAmount = -fadeAmount ;
   }
+  // wait for 30 milliseconds to see the dimming effect
+  delay(30);
 }
 
 </code>
@@ -311,6 +318,60 @@ Generally we use  SoftwareSerial headers for serial communication. So wee need t
 
 The program<br><br>
 
+
+<pre><code class="language-css">
+
+#include <SoftwareSerial.h>
+
+const byte rxpin =0;
+const byte txpin=1;
+
+
+
+//set up a new serial
+SoftwareSerial mySerial (rxpin, txpin);
+void setup() {
+  pinMode(8, OUTPUT);
+  pinMode(7,INPUT);
+  digitalWrite(7,HIGH);
+  mySerial.begin(9600);
+  }
+
+
+  void loop() {
+
+    //reading serial chara
+    if (mySerial.read()=='c')
+{
+  digitalWrite(8, HIGH);
+  delay(1000);
+  digitalWrite(8, LOW);
+  
+  }
+  else {}
+
+  //reading reset press and serial printing
+
+  if (digitalRead(7)==LOW){
+    
+    
+    mySerial.print('e');
+    }
+  else {}
+  
+  }
+
+  </code></pre>
+
+  <br>
+  Now we connect the board to FAB ISP and coonect FTDI header to board and conncet the other end to Laptop. Now we have to burn the above program to the board using arduino ide. After burning the program to board and onece it is completed successfully we need to open the Serial monitor window and press the button in the board.
+<br><br>
+<img src="images/serial.png"  align="center" width="" >
+
+<p style=" text-align:center;  "> Serial Monitor Window after pressing button </p><br><br>
+
+When we send "c" using serial monitor the LED will glow. Thus we completed the serial communication via FTDI Header. 
+
 <h3>Day 5</h3>
 <h4>Video Conferencing</h4><br>
 
@@ -330,6 +391,9 @@ The program<br><br>
                     </li >
                     <li style="margin-left: 115px;">
                         <h3><a href="week4.html">Week 4</a></h3>
+                    </li>
+					<li style="margin-left: 115px;">
+                        <h3><a href="project.html">Project</a></h3>
                     </li>
                 </ul>
                     
