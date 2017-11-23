@@ -30,7 +30,7 @@ var __slice = [].slice,
         this.settings.classSuffix = "-" + this.settings.theme;
       }
       this.input.hide();
-      this.slider = $("<div>").addClass("slider" + (this.settings.classSuffix || "")).css({
+      this.slider = $("<div>").addClass("slidercalc" + (this.settings.classSuffix || "")).css({
         position: "relative",
         userSelect: "none",
         boxSizing: "border-box"
