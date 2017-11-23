@@ -1,21 +1,21 @@
 
 		$(document).ready(function(){
 			$("#la").bind(
-				"slidercalc:changed", function (event, data) {				
+				"slider:changed", function (event, data) {				
 					$("#la_value").html(data.value.toFixed(0)); 
 					calculateEMI();
 				}
 			);
 
 			$("#nm").bind(
-				"slidercalc:changed", function (event, data) {				
+				"slider:changed", function (event, data) {				
 					$("#nm_value").html(data.value.toFixed(0)); 
 					calculateEMI();
 				}
 			);
 			
 			$("#roi").bind(
-				"slidercalc:changed", function (event, data) {				
+				"slider:changed", function (event, data) {				
 					$("#roi_value").html(data.value.toFixed(2)); 
 					calculateEMI();
 				}
