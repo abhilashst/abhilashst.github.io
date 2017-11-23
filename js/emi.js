@@ -60,7 +60,10 @@
 					bb = bb - pre_dd.toFixed(2);
 				}
 					detailDesc += "</tbody>";
-				
+				$("#illustrate").html(detailDesc);
+						
+			
+			}
 			calculateEMI();
 
 		});
