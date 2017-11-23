@@ -60,43 +60,7 @@
 					bb = bb - pre_dd.toFixed(2);
 				}
 					detailDesc += "</tbody>";
-				$("#illustrate").html(detailDesc);
-				 $('#container').highcharts({
-				 
-						chart: {
-							plotBackgroundColor: null,
-							plotBorderWidth: null,
-							plotShadow: false
-						},
-						title: {
-							text: 'EMI Calculator'
-						},
-						tooltip: {
-							//pointFormat: '{series.name}: <b>{point.value}%</b>'
-						},
-						plotOptions: {
-							pie: {
-								allowPointSelect: true,
-								cursor: 'pointer',
-								dataLabels: {
-								//	enabled: true,
-									color: '#000000',
-									connectorColor: '#000000',
-									format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-								}
-							}
-						},
-						series: [{
-							type: 'pie',
-							name: 'Amount',
-							data: [
-								['Loan',   eval(loanAmount)],
-								['Interest',       eval(interest.toFixed(2))]
-							]
-						}]
-					});			
-			
-			}
+				
 			calculateEMI();
 
 		});
