@@ -71,7 +71,7 @@ function calculateEMI() {
   $("#illustrate").html(detailDesc);
 }
 
-$(document).ready(function() {
+function setUpHandlers() {
   $("#la").on("change", function(event, data) {
     $("#la_value").html(parseInt($(this).val()).toFixed(0));
     calculateEMI();
@@ -88,4 +88,14 @@ $(document).ready(function() {
   });
 
   calculateEMI();
-});
+}
+
+function defer(method) {
+  if (window.jQuery && window.$) {
+      method();
+  } else {
+      setTimeout(function() { defer(method) }, 50);
+  }
+}
+
+defer(setUpHandlers);
