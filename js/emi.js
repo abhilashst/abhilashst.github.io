@@ -1,4 +1,4 @@
-```function calculateEMI() {
+function calculateEMI() {
   var loanAmount = $("#la_value").html();
   var numberOfMonths = $("#nm_value").html();
   var rateOfInterest = $("#roi_value").html();
