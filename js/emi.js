@@ -73,11 +73,11 @@ function calculateEMI() {
 
 function setUpHandlers() {
   function sliderFormatter(value) {
-        return 'Current value: ' + value;    
+        return 'Current value: ' + value;
   }
-  $('#la').slider({ formatter: sliderFormatter });
-  $('#nm').slider({ formatter: sliderFormatter });
-  $('#roi').slider({ formatter: sliderFormatter });
+  new Slider('#la', { formatter: sliderFormatter });
+  new Slider('#nm', { formatter: sliderFormatter });
+  new Slider('#roi', { formatter: sliderFormatter });
 
   $("#la").on("change", function(event, data) {
     $("#la_value").html(parseInt($(this).val()).toFixed(0));
