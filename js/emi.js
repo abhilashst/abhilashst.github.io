@@ -98,7 +98,7 @@ function setUpHandlers() {
 }
 
 function defer(method) {
-  if (window.jQuery && window.$) {
+  if (window.jQuery && window.$ && typeof window.Slider === 'function') {
       method();
   } else {
       setTimeout(function() { defer(method) }, 50);
