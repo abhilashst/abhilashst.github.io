@@ -90,11 +90,12 @@ var chart = new Highcharts.Chart({
 								allowPointSelect: true,
 								cursor: 'pointer',
 								dataLabels: {
-								//	enabled: true,
+								//	enabled: false,
 									color: '#000000',
 									connectorColor: '#000000',
 									format: '<b>{point.name}</b>: {point.percentage:.1f} %'
 								}
+							shouInLegend:true
 							}
 						},
 						series: [{
