@@ -70,10 +70,6 @@ function calculateEMI() {
   detailDesc += "</tbody>";
 $("#illustrate").html(detailDesc);
 
-			
-}
-
-function setUpHandlers() {
 	$('#container').highcharts({
 				 
 						chart: {
@@ -108,7 +104,11 @@ function setUpHandlers() {
 							]
 						}]
 					});			
-	 	
+	 			
+}
+
+function setUpHandlers() {
+	
   var laSlider = new Slider("#la");
   var nmSlider = new Slider("#nm");
   var roiSlider = new Slider("#roi");
