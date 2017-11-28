@@ -81,7 +81,7 @@ var chart = new Highcharts.Chart({
 
 						},
 						title: {
-							text: 'EMI Calculator'
+							text: 'Payment Breakup'
 						},
 						tooltip: {
 							//pointFormat: '{series.name}: <b>{point.value}%</b>'
