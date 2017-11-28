@@ -67,7 +67,9 @@ function calculateEMI() {
       "</td></tr>";
     bb = bb - pre_dd.toFixed(2);
   }
-  detailDesc += "</tbody>";		
+  detailDesc += "</tbody>";
+$("#illustrate").html(detailDesc);
+
 			
 }
 
