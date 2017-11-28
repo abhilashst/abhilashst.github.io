@@ -85,18 +85,19 @@ var chart = new Highcharts.Chart({
 						tooltip: {
 							//pointFormat: '{series.name}: <b>{point.value}%</b>'
 						},
-						
+						plotOptions: {
+							pie: {
+								allowPointSelect: true,
+								showInLegend:true,
+								cursor: 'pointer',
+								dataLabels: {
+								    enabled: false,
+									color: '#000000',
+									connectorColor: '#000000',
+									format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+								}
+							}
 						},
-						  plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-                enabled: false
-            },
-            showInLegend: true
-        }
-    },
 						series: [{
 							type: 'pie',
 							name: 'Amount',
