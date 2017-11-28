@@ -84,6 +84,9 @@ var chart = new Highcharts.Chart({
 						tooltip: {
 							//pointFormat: '{series.name}: <b>{point.value}%</b>'
 						},
+	title:{
+    text:''
+},
 						plotOptions: {
 							pie: {
 								allowPointSelect: true,
