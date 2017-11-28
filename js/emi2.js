@@ -80,9 +80,7 @@ var chart = new Highcharts.Chart({
 						    renderTo: 'container'
 
 						},
-						title: {
-							text: 'Payment Breakup'
-						},
+						
 						tooltip: {
 							//pointFormat: '{series.name}: <b>{point.value}%</b>'
 						},
