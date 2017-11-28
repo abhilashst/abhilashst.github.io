@@ -87,6 +87,9 @@ var chart = new Highcharts.Chart({
 	title:{
     text:''
 },
+	credits: {
+    enabled: false
+  },
 						plotOptions: {
 							pie: {
 								allowPointSelect: true,
