@@ -87,14 +87,16 @@ var chart = new Highcharts.Chart({
 						},
 						
 						},
-						plotOptions: {
-						pie: {
-						allowPointSelect: true,
-						cursor: 'pointer',
-						dataLabels: {
-						enabled: false
-						}}},
-          
+						  plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: false
+            },
+            showInLegend: true
+        }
+    },
 						series: [{
 							type: 'pie',
 							name: 'Amount',
