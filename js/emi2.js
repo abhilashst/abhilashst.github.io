@@ -1,8 +1,3 @@
-var slider = new Slider("#la", {
-    ticks: [1000, 100000, 1000000, 1000000, 1000000],
-    ticks_labels: ['100000', '100000', '100000', '100000', '100000'],
-    ticks_snap_bounds: 30
-});
 
 function calculateEMI() {
   var loanAmount = $("#la_value").html();
