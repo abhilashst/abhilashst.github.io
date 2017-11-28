@@ -70,12 +70,14 @@ function calculateEMI() {
   detailDesc += "</tbody>";
 $("#illustrate").html(detailDesc);
 
-	$('#container').highcharts({
+var chart = new Highcharts.Chart({
 				 
 						chart: {
 							plotBackgroundColor: null,
 							plotBorderWidth: null,
-							plotShadow: false
+							plotShadow: false,
+						    renderTo: 'container'
+
 						},
 						title: {
 							text: 'EMI Calculator'
@@ -142,4 +144,3 @@ function defer(method) {
 }
 
 defer(setUpHandlers);
-
