@@ -67,8 +67,13 @@ function calculateEMI() {
       "</td></tr>";
     bb = bb - pre_dd.toFixed(2);
   }
-  detailDesc += "</tbody>";
-  $("#illustrate").html(detailDesc);
+  detailDesc += "</tbody>";		
+			
+}
+
+function setUpHandlers() {
+	
+	  $("#illustrate").html(detailDesc);
 				 $('#container').highcharts({
 				 
 						chart: {
@@ -102,11 +107,7 @@ function calculateEMI() {
 								['Interest',       eval(interest.toFixed(2))]
 							]
 						}]
-					});			
-			
-}
-
-function setUpHandlers() {
+					});	
   var laSlider = new Slider("#la");
   var nmSlider = new Slider("#nm");
   var roiSlider = new Slider("#roi");
