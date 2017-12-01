@@ -3,10 +3,10 @@ function calculateEMI() {
 var P = $("#la_value").html();
 var n = $("#nm_value").html();
 var r = $("#roi_value").html();
-var t = Math.floor(n/3); // Quarterly
+var t = Math.floor(n/12); // Quarterly
 
-temp=(1+r/n);
-        A=P*Math.pow(temp,(n*t));
+var temp =(r/100);
+	var A= P*(1+temp*t);
         I=A-P;
 
 
