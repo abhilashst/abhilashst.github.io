@@ -13,15 +13,17 @@ $("#tbl_de").html( depositedAmount.toFixed(0).toString().replace(/,/g, "").repla
 $("#tbl_full").html(accumulateMonthlyAmount.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 $("#tbl_int").html(finalInterestGain.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 		
-		$('#container').highcharts({
+		var chart = new Highcharts.Chart({
 				 
 						chart: {
 							plotBackgroundColor: null,
 							plotBorderWidth: null,
-							plotShadow: false
+							plotShadow: false,
+						    renderTo: 'container'
+
 						},
 						title: {
-							text: 'Recurring Deposit Calculator'
+							text: 'Recurring Deposit Breakup'
 						},
 						tooltip: {
 							//pointFormat: '{series.name}: <b>{point.value}%</b>'
