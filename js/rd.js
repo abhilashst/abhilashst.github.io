@@ -22,18 +22,22 @@ $("#tbl_int").html(finalInterestGain.toFixed(2).toString().replace(/,/g, "").rep
 						    renderTo: 'container'
 
 						},
-						title: {
-							text: 'Recurring Deposit Breakup'
-						},
 						tooltip: {
 							//pointFormat: '{series.name}: <b>{point.value}%</b>'
 						},
+	title:{
+    text:''
+},
+	credits: {
+    enabled: false
+  },
 						plotOptions: {
 							pie: {
 								allowPointSelect: true,
+								showInLegend:true,
 								cursor: 'pointer',
 								dataLabels: {
-								//	enabled: true,
+								    enabled: false,
 									color: '#000000',
 									connectorColor: '#000000',
 									format: '<b>{point.name}</b>: {point.percentage:.1f} %'
