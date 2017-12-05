@@ -7,12 +7,12 @@ var t = Math.floor(n/12); // Quarterly
 
 var temp =(r/100);
 	var amount = Princi*(1+temp*t);
-        I= amount-Princi;
+        var Interest= amount-Princi;
 
 
-$("#tbl_de").html(princi.toFixed(0).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-$("#tbl_full").html(A.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-$("#tbl_int").html(I.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+$("#tbl_de").html(Princi);
+$("#tbl_full").html(amount);
+$("#tbl_int").html(Interest);
 		
 		var chart = new Highcharts.Chart({
 				 
