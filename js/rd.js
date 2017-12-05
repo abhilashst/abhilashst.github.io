@@ -3,16 +3,19 @@ function calculateEMI() {
 	var monthlyInstallment = $("#la_value").html();
 var numberOfMonths = $("#nm_value").html();
 var rateOfInterest = $("#roi_value").html();
-
+var rateOfInterestFixed = 15;
+	
 var frequency = Math.floor(numberOfMonths/3); // Quarterly
 var accumulateMonthlyAmount = parseInt(monthlyInstallment) * ((Math.pow(rateOfInterest / 400 + 1, frequency) - 1) / (1-(Math.pow(rateOfInterest / 400 + 1,(-1/3)))));
 var finalInterestGain = accumulateMonthlyAmount - monthlyInstallment * numberOfMonths;
+var accumulateMonthlyAmount2 = parseInt(monthlyInstallment) * ((Math.pow(rateOfInterestFixed / 400 + 1, frequency) - 1) / (1-(Math.pow(rateOfInterestFixed / 400 + 1,(-1/3)))));
 
 var depositedAmount = monthlyInstallment * numberOfMonths;
 $("#tbl_de").html( depositedAmount.toFixed(0).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 $("#tbl_full").html(accumulateMonthlyAmount.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 $("#tbl_int").html(finalInterestGain.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-		
+$("#tbl_mf").html(accumulateMonthlyAmount2.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+
 		var chart = new Highcharts.Chart({
 				 
 						chart: {
