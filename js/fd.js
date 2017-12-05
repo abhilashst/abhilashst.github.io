@@ -1,16 +1,16 @@
 function calculateEMI() {
 	
-var P = $("#la_value").html();
+var Princi = $("#la_value").html();
 var n = $("#nm_value").html();
 var r = $("#roi_value").html();
 var t = Math.floor(n/12); // Quarterly
 
 var temp =(r/100);
-	var A= P*(1+temp*t);
-        I=A-P;
+	var amount = Princi*(1+temp*t);
+        I= amount-Princi;
 
 
-$("#tbl_de").html( P.toFixed(0).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+$("#tbl_de").html(princi.toFixed(0).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 $("#tbl_full").html(A.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 $("#tbl_int").html(I.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 		
