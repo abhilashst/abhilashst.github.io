@@ -8,52 +8,14 @@ var t = Math.floor(n/12); // Quarterly
 var temp =(r/100);
 	var amount = Princi*(1+temp*t);
         var Interest= amount-Princi;
-
+amount = parseFloat(amount).toFixed(0);
+	Interest  = parseFloat(Interest).toFixed(0);
 
 $("#tbl_de").html(Princi);
 $("#tbl_full").html(amount);
 $("#tbl_int").html(Interest);
 		
-		var chart = new Highcharts.Chart({
-				 
-						chart: {
-							plotBackgroundColor: null,
-							plotBorderWidth: null,
-							plotShadow: false,
-						    renderTo: 'container'
-
-						},
-						tooltip: {
-							//pointFormat: '{series.name}: <b>{point.value}%</b>'
-						},
-	title:{
-    text:''
-},
-	credits: {
-    enabled: false
-  },
-						plotOptions: {
-							pie: {
-								allowPointSelect: true,
-								showInLegend:true,
-								cursor: 'pointer',
-								dataLabels: {
-								    enabled: false,
-									color: '#000000',
-									connectorColor: '#000000',
-									format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-								}
-							}
-						},
-						series: [{
-							type: 'pie',
-							name: 'Amount',
-							data: [
-								['Principal',   eval(depositedAmount.toFixed(0))],
-								['Interest',     eval(finalInterestGain.toFixed(0))]
-							]
-						}]
-					});		
+		
 	 			
 }
 
