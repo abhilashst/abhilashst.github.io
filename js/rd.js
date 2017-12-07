@@ -10,20 +10,19 @@ var ci = 4; // Quarterly
 var irate=rate/ci;
 var irate2=rateOfInterestFixed/ci;
 var year=numberOfMonths/12;
-console.log(year);
 var accumulateMonthlyAmount =  monthlyInstallment  *(Math.pow((1+ irate/100),(year)*ci)-1)/(1-Math.pow((1+irate/100),-ci/12));
-	
-console.log(accumulateMonthlyAmount);
+var rupee= '₹ ';
+var final = rupee + accumulateMonthlyAmount.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 //var accumulateMonthlyAmount = parseInt(monthlyInstallment) * ((Math.pow(rateOfInterest / 400 + 1, frequency) - 1) / (1-(Math.pow(rateOfInterest / 400 + 1,(-1/3)))));
 var finalInterestGain = accumulateMonthlyAmount - (monthlyInstallment * numberOfMonths);
 //var accumulateMonthlyAmount2 = parseInt(monthlyInstallment) * ((Math.pow(rateOfInterestFixed / 400 + 1, ci) - 1) / (1-(Math.pow(rateOfInterestFixed / 400 + 1,(-1/3)))));
 var accumulateMonthlyAmount2 =  monthlyInstallment  *(Math.pow((1+ irate2/100),(year)*ci)-1)/(1-Math.pow((1+irate2/100),-ci/12));
 
 var depositedAmount = monthlyInstallment * numberOfMonths;
-$("#tbl_de").html( depositedAmount.toFixed(0).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-$("#tbl_full").html(accumulateMonthlyAmount.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-$("#tbl_int").html(finalInterestGain.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-$("#tbl_mf").html(accumulateMonthlyAmount2.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+$("#tbl_de").html(rupee + depositedAmount.toFixed(0).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+$("#tbl_full").html(final);
+$("#tbl_int").html(rupee + finalInterestGain.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+$("#tbl_mf").html(rupee + accumulateMonthlyAmount2.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 
 		var chart = new Highcharts.Chart({
 				 
