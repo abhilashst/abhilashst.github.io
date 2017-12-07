@@ -6,8 +6,11 @@ var rateOfInterest = $("#roi_value").html();
 var rateOfInterestFixed = 15;
 	
 var frequency = Math.floor(numberOfMonths/3); // Quarterly
+	
+	
+	
 var accumulateMonthlyAmount = parseInt(monthlyInstallment) * ((Math.pow(rateOfInterest / 400 + 1, frequency) - 1) / (1-(Math.pow(rateOfInterest / 400 + 1,(-1/3)))));
-var finalInterestGain = accumulateMonthlyAmount - monthlyInstallment * numberOfMonths;
+var finalInterestGain = accumulateMonthlyAmount - (monthlyInstallment * numberOfMonths);
 var accumulateMonthlyAmount2 = parseInt(monthlyInstallment) * ((Math.pow(rateOfInterestFixed / 400 + 1, frequency) - 1) / (1-(Math.pow(rateOfInterestFixed / 400 + 1,(-1/3)))));
 
 var depositedAmount = monthlyInstallment * numberOfMonths;
