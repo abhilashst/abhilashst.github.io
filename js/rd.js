@@ -23,6 +23,8 @@ var benefit= accumulateMonthlyAmount2 - depositedAmount;
 $("#tbl_de").html(rupee + depositedAmount.toFixed(0).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 $("#tbl_full").html(final);
 $("#tbl_int").html(rupee + finalInterestGain.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+$("#tbl_int2").html(rupee + finalInterestGain.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+
 $("#tbl_mf").html(rupee + benefit.toFixed(2).toString().replace(/,/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 
 		var chart = new Highcharts.Chart({
